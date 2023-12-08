@@ -2,10 +2,10 @@
 		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.example</groupId>
-	<artifactId>SpringMyBatis</artifactId>
+	<artifactId>SpringCRUDFianl</artifactId>
 	<packaging>war</packaging>
 	<version>1.0-SNAPSHOT</version>
-	<name>SpringMyBatis Maven Webapp</name>
+	<name>SpringCRUDFianl Maven Webapp</name>
 	<url>http://maven.apache.org</url>
 	<properties>
 		<maven.compiler.source>1.8</maven.compiler.source>
@@ -67,6 +67,6 @@
 
 	</dependencies>
 	<build>
-		<finalName>SP_springP</finalName>
+		<finalName>SpringCRUDFianl</finalName>
 	</build>
 </project>
