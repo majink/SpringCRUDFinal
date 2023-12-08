@@ -8,6 +8,8 @@ import java.util.List;
 
 import com.crud.BoardRowMapper;
 import com.crud.board.BoardVO;
+import org.apache.ibatis.session.SqlSession;
+import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
@@ -21,7 +23,7 @@ public class BoardDAO {
 	ResultSet rs = null;
 
 	@Autowired
-	JdbcTemplate jdbcTemplate;
+	SqlSession sqlSession;
 	private final String BOARD_INSERT = "insert into BOARD (title, writer, content) values (?,?,?)";
 	private final String BOARD_UPDATE = "update BOARD set title=?, writer=?, content=? where seq=?";
 	private final String BOARD_DELETE = "delete from BOARD  where seq=?";
@@ -30,76 +32,26 @@ public class BoardDAO {
 
 
 	public int insertBoard(BoardVO vo) {
-		String sql = "insert into BOARD (name, place, img, ingredient, rate, feature, price) values ("
-			+"'" + vo.getName() + "',"
-			+"'" + vo.getPlace() + "',"
-			+"'" + vo.getImg() + "',"
-			+"'" + vo.getIngredient() + "',"
-			+"'" + vo.getRate() + "',"
-			+"'" + vo.getFeature() + "',"
-			+"'" + vo.getPrice() + "')";
-		return jdbcTemplate.update(sql);
+		int result = sqlSession.insert("Board.insertBoard", vo);
+		return result;
 	}
 
-	// 글 삭제
 	public int deleteBoard(int seq) {
-		String sql = "delete from BOARD where no = " + seq;
-		return jdbcTemplate.update(sql);
+		int result = sqlSession.delete("Board.deleteBoard", seq);
+		return result;
 	}
+
 	public int updateBoard(BoardVO vo) {
-		String sql = "update BOARD set name='" + vo.getName() + "', "
-				+ " place='" + vo.getPlace() + "', "
-				+ " img='" + vo.getImg() + "', "
-				+ " ingredient='" + vo.getIngredient() + "', "
-				+ " rate=" + vo.getRate() + ", "
-				+ " feature='" + vo.getFeature() + "', "
-				+ " price=" + vo.getPrice() + " where no=" + vo.getSeq();
-		return jdbcTemplate.update(sql);
+		int one = sqlSession.update("Board.updateBoard", vo);
+		return one;
 	}
-
-
-
 	public BoardVO getBoard(int seq) {
-		String sql = "select * from BOARD where no=?";
-		return jdbcTemplate.queryForObject(sql, new Object[]{seq}, new RowMapper<BoardVO>() {
-			@Override
-			public BoardVO mapRow(ResultSet rs, int rowNum) throws SQLException {
-				BoardVO data = new BoardVO();
-
-				data.setSeq(rs.getInt("no"));
-				data.setName(rs.getString("name"));
-				data.setPlace(rs.getString("place"));
-				data.setImg(rs.getString("img"));
-				data.setIngredient(rs.getString("ingredient"));
-				data.setRate(rs.getInt("rate"));
-				data.setFeature(rs.getString("feature"));
-				data.setPrice(rs.getInt("price"));
-
-				return data;
-			}
-		});
+		BoardVO one = sqlSession.selectOne("Board.getBoard", seq);
+		return one;
 	}
-
 
 	public List<BoardVO> getBoardList(){
-		String sql = "select * from BOARD order by no desc";
-		List<BoardVO> list = jdbcTemplate.query(sql, new RowMapper<BoardVO>() {
-			@Override
-			public BoardVO mapRow(ResultSet rs, int rowNum) throws SQLException {
-				BoardVO data = new BoardVO();
-
-				data.setSeq(rs.getInt("no"));
-				data.setName(rs.getString("name"));
-				data.setPlace(rs.getString("place"));
-				data.setImg(rs.getString("img"));
-				data.setIngredient(rs.getString("ingredient"));
-				data.setRate(rs.getInt("rate"));
-				data.setFeature(rs.getString("feature"));
-				data.setPrice(rs.getInt("price"));
-
-				return data;
-			}
-		});
+		List<BoardVO> list = sqlSession.selectList("Board.getBoardList");
 		return list;
 	}
 }

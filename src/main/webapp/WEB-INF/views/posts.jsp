@@ -35,7 +35,7 @@
 </style>
 <script>
 	function delete_ok(id){
-		var a = confirm("정말로 삭제하겠습니까?");
+		var a = confirm("정말로 삭제하겠습니까?" + id);
 		if(a) location.href='deleteok/' + id;
 	}
 </script>
@@ -63,6 +63,8 @@
 		<td><a href="javascript:delete_ok('${u.getSeq()}')">Delete</a></td>
 	</tr>
 </c:forEach>
+	<a href="login/logout">로그아웃</a>
+	<h3>환영합니다.${login.user_name}님</h3>
 </table>
 <br/><a href="addpostform">Add New Post</a>
 </body>

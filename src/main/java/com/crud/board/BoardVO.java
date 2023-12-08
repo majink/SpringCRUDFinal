@@ -3,7 +3,7 @@ package com.crud.board;
 import java.util.Date;
 
 public class BoardVO {
-	private int seq;
+	private int no;
 	private String name;
 	private String place;
 	private String img;
@@ -13,10 +13,10 @@ public class BoardVO {
 	private int price;
 
 	public int getSeq() {
-		return seq;
+		return no;
 	}
-	public void setSeq(int seq) {
-		this.seq = seq;
+	public void setSeq(int no) {
+		this.no = no;
 	}
 	public String getName() {
 		return name;

@@ -69,6 +69,7 @@ public class BoardController {
 
     @RequestMapping(value="/deleteok/{id}", method = RequestMethod.GET)
     public String deletePostOk(@PathVariable("id") int id) {
+        System.out.println(id);
         if(boardService.deleteBoard(id)==0)
             System.out.println("데이터삭제실패");
         else
