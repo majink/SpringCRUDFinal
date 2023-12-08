@@ -9,10 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e4dd0d37-033b-41ab-8c8d-6ce8482b01e2" name="Changes" comment="1.4(login added)">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-    </list>
+    <list default="true" id="e4dd0d37-033b-41ab-8c8d-6ce8482b01e2" name="Changes" comment="1.0(start)" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -51,6 +48,9 @@
     <option name="FILTER_INFO" value="true" />
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
@@ -225,7 +225,7 @@
       <workItem from="1701760737400" duration="3234000" />
       <workItem from="1701768354631" duration="8406000" />
       <workItem from="1702018578038" duration="7133000" />
-      <workItem from="1702040588330" duration="202000" />
+      <workItem from="1702040588330" duration="552000" />
     </task>
     <task id="LOCAL-00001" summary="1.0">
       <option name="closed" value="true" />
@@ -259,7 +259,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702026855801</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="1.0(start)">
+      <option name="closed" value="true" />
+      <created>1702040846304</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1702040846304</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -281,6 +289,7 @@
     <MESSAGE value="1.1" />
     <MESSAGE value="1.2(maybe final)" />
     <MESSAGE value="1.4(login added)" />
-    <option name="LAST_COMMIT_MESSAGE" value="1.4(login added)" />
+    <MESSAGE value="1.0(start)" />
+    <option name="LAST_COMMIT_MESSAGE" value="1.0(start)" />
   </component>
 </project>
