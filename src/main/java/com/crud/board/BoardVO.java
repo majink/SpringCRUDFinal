@@ -6,7 +6,7 @@ public class BoardVO {
 	private int no;
 	private String name;
 	private String place;
-	private String img;
+	private String type;
 	private String ingredient;
 	private String feature;
 	private int rate;
@@ -30,12 +30,7 @@ public class BoardVO {
 	public void setPlace(String place) {
 		this.place = place;
 	}
-	public String getImg() {
-		return img;
-	}
-	public void setImg(String img) {
-		this.img = img;
-	}
+
 	public String getIngredient() {
 		return ingredient;
 	}
@@ -60,5 +55,13 @@ public class BoardVO {
 	}
 	public void setPrice(int price) {
 		this.price = price;
+	}
+
+	public String getType() {
+		return type;
+	}
+
+	public void setType(String type) {
+		this.type = type;
 	}
 }
