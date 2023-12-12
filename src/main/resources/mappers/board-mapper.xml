@@ -6,11 +6,11 @@
     <insert id="insertBoard">
         insert into BOARD (no, name, place, img, ingredient, rate, feature, price)
         values
-        (#{seq}, #{name}, #{place}, #{img}, #{ingredient}, #{rate}, #{feature}, #{price})
+        (#{seq}, #{name}, #{place}, #{ingredient}, #{rate}, #{feature}, #{price})
     </insert>
     <update id="updateBoard">
         update BOARD
-        set name = #{name}, place = #{place}, img = #{img}, ingredient = #{ingredient}, rate = #{rate}, feature = #{feature}, price = #{price}
+        set name = #{name}, place = #{place}, ingredient = #{ingredient}, rate = #{rate}, feature = #{feature}, price = #{price}
         where no = #{seq}
     </update>
     <delete id="deleteBoard">

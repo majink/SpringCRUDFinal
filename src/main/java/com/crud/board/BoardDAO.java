@@ -26,7 +26,7 @@ public class BoardDAO {
 	SqlSession sqlSession;
 	private final String BOARD_INSERT = "insert into BOARD (title, writer, content) values (?,?,?)";
 	private final String BOARD_UPDATE = "update BOARD set title=?, writer=?, content=? where seq=?";
-	private final String BOARD_DELETE = "delete from BOARD  where seq=?";
+	private final String BOARD_DELETE = "delete from  where seq=?";
 	private final String BOARD_GET = "select * from BOARD  where seq=?";
 	private final String BOARD_LIST = "select * from BOARD order by seq desc";
 
