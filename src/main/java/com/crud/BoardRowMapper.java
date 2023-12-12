@@ -13,7 +13,7 @@ public class BoardRowMapper implements RowMapper<BoardVO> {
         vo.setSeq(rs.getInt("no"));
         vo.setName(rs.getString("name"));
         vo.setPlace(rs.getString("place"));
-        vo.setImg(rs.getString("img"));
+        vo.setType(rs.getString("type"));
         vo.setIngredient(rs.getString("ingredient"));
         vo.setRate(rs.getInt("rate"));
         vo.setFeature(rs.getString("feature"));
