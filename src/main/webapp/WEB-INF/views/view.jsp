@@ -20,7 +20,7 @@
 <table>
 <tr><td>이름:</td><td>${u.name}</td></tr>
  <tr><td>장소:</td><td>${u.place}</td></tr>
- <tr><td>이미지:</td><td>${u.img}</td></tr>
+ <tr><td>종류:</td><td>${u.type}</td></tr>
  <tr><td>재료:</td><td>${u.ingredient}</td></tr>
  <tr><td>점수:</td><td>${u.rate}</td></tr>
  <tr><td>특징:</td><td>${u.feature}</td></tr>
