@@ -29,7 +29,7 @@
     <tr><td>특징:</td><td><input type="textarea" name="feature"/></td></tr>
     <tr><td>가격:</td><td><input type="number" name="price"/></td></tr>
 
-<tr><td><a href="posts">View All Records</a></td><td align="right"><input type="submit" value="Add Post"/></td></tr>
+    <tr><td><a href="posts">View All Records</a></td><td align="right"><input type="submit" value="Add Post"/></td></tr>
 </table>
 </form>
 

@@ -67,7 +67,8 @@
 </c:forEach>
 	<a href="login/logout">로그아웃</a>
 	<h3>환영합니다.${login.user_name}님</h3>
+	<br/><a href="addpostform">메뉴 리뷰 추가</a>
+
 </table>
-<br/><a href="addpostform">Add New Post</a>
 </body>
 </html>
