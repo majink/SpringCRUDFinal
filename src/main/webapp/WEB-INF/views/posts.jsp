@@ -47,8 +47,8 @@
 	<th>Id</th>
 	<th>이름</th>
 	<th>장소</th>
-	<th>이미지</th>
 	<th>가격</th>
+	<th>점수</th>
 	<th>수정</th>
 	<th>삭제</th>
 </tr>
@@ -57,8 +57,8 @@
 		<td><a href="view/${u.getSeq()}">${u.getSeq()}</a></td>
 		<td><a href="view/${u.getSeq()}">${u.getName()}</a></td>
 		<td>${u.getPlace()}</td>
-		<td>${u.getImg()}</td>
 		<td>${u.getPrice()}</td>
+        <td>${u.getRate()}</td>
 		<td><a href="editform/${u.getSeq()}">Edit</a></td>
 		<td><a href="javascript:delete_ok('${u.getSeq()}')">Delete</a></td>
 	</tr>

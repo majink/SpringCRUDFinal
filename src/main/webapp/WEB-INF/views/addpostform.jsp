@@ -13,7 +13,6 @@
 <table>
 <tr><td>이름:</td><td><input type="text" name="name"/></td></tr>
 <tr><td>장소:</td><td><input type="text" name="place"/></td></tr>
-    <tr><td>이미지:</td><td><input type="text" name="img"/></td></tr>
     <tr><td>재료:</td><td><input type="text" name="ingredient"/></td></tr>
     <tr><td>점수:</td><td><input type="number" name="rate"/></td></tr>
     <tr><td>특징:</td><td><input type="text" name="feature"/></td></tr>
